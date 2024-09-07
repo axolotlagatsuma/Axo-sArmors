@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "axosarmors",
+  "version": "${version}",
+  "name": "Axo's Armors",
+  "description": "First Fabric Mod of Axolotl",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/first/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.axolotlagatsuma.axosarmors.client.AxosArmorsClient"
+    ],
+    "main": [
+      "org.axolotlagatsuma.axosarmors.axosarmors"
+    ]
+  },
+  "mixins": [
+    "axosarmors.mixins.json",
+    {
+      "config": "axosarmors.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
