@@ -1,8 +1,6 @@
 package org.axolotlagatsuma.axosarmors;
 
 import net.fabricmc.api.ModInitializer;
-import org.axolotlagatsuma.axosarmors.ModItems;
-import org.axolotlagatsuma.axosarmors.ModArmorMaterials;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,9 +11,9 @@ public class axosarmors implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Axolotl s Mod is initializing!");
+        LOGGER.info("Axo's Armors mod is initializing!");
+        //ModArmorMaterials.initialize();
         ModItems.initialize();
-//        ModItems.appendTooltip();
-        ModArmorMaterials.initialize();
+        ModBlocks.initialize();
     }
 }

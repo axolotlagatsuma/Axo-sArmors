@@ -1,7 +1,16 @@
 {
-  "item.first.axolotl_fins": "Axolotl Fins",
-  "item.first.axolotl_skin": "Axolotl Skin",
-  "item.first.poopoo": "Axolotl Poop",
-  "item.first.axolotl_flesh": "Axolotl Flesh",
-  "item.first.axolotl_infused_axe": "Axolotl Infused Axe"
+  "item.axosarmors.axolotl_fins": "Axolotl Fins",
+  "item.axosarmors.axolotl_skin": "Axolotl Skin",
+  "item.axosarmors.poopoo": "Axolotl Poop",
+  "item.axosarmors.axolotl_flesh": "Axolotl Flesh",
+  "item.axosarmors.cooked_axolotl_flesh": "Cooked Axolotl Flesh",
+  "item.axosarmors.axolotl_infused_netherite_axe": "Axolotl Infused Netherite Axe",
+  "item.axosarmors.fully_axolotl_infused_netherite": "Axolotl Infused Netherite",
+  "item.axosarmors.fully_axolotl_infused_netherite.tooltip": "Infused with thousand (not really it's like two or something) axolotls",
+  "item.axosarmors.axolotl_infused_netherite_helmet": "Axolotl Infused Netherite Helmet",
+  "item.axosarmors.axolotl_infused_netherite_chestplate": "Axolotl Infused Netherite Chestplate",
+  "item.axosarmors.axolotl_infused_netherite_leggings": "Axolotl Infused Netherite Leggings",
+  "item.axosarmors.axolotl_infused_netherite_boots": "Axolotl Infused Netherite Boots",
+  "block.axosarmors.axolotl_infused_netherite_block": "Axolotl Infused Netherite Block",
+  "itemGroup.axosarmors": "Axo's Armors"
 }

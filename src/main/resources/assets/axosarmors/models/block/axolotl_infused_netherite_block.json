@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "axosarmors:block/axolotl_infused_netherite_block"
+  }
+}

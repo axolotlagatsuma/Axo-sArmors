@@ -3,35 +3,36 @@ package org.axolotlagatsuma.axosarmors;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class axolotlInfusedTools implements ToolMaterial {
+public class axolotlInfusedNetheriteToolMaterial implements ToolMaterial {
+    public static final axolotlInfusedNetheriteToolMaterial INSTANCE = new axolotlInfusedNetheriteToolMaterial();
+
     @Override
     public int getDurability() {
-        return 2531;
+        return 2532;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 18.0F;
+        return 12.0F;
     }
 
     @Override
     public float getAttackDamage() {
-        return 8.0F;
+        return 3.0F;
     }
 
     @Override
     public int getMiningLevel() {
-        return 4;
+        return 3;
     }
 
     @Override
     public int getEnchantability() {
-        return 30;
+        return 15;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.ofItems(ModItems.FullyAxolotlInfusedNetherite);
     }
-    public static final axolotlInfusedTools INSTANCE = new axolotlInfusedTools();
 }
