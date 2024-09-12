@@ -1,5 +1,6 @@
 package org.axolotlagatsuma.axosarmors;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -30,10 +31,6 @@ public class ModItems {
         return registeredItem;
     }
 
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.axosarmors.fully_axolotl_infused_netherite.tooltip").formatted(Formatting.DARK_PURPLE));
-    }
-
     public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), new Identifier(axosarmors.MOD_ID, "item_group"));
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModItems.INFUSED_NETHERITE_CHESTPLATE))
@@ -62,9 +59,15 @@ public class ModItems {
             .build();
 
     public static final Item FullyAxolotlInfusedNetherite = register(
-            new Item(new Item.Settings()),
+            new Item(new Item.Settings()) {
+               // @Override
+               // public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+                //    tooltip.add(Text.translatable("item.axosarmors.fully_axolotl_infused_netherite.tooltip").formatted(Formatting.DARK_PURPLE));
+               // }
+            },
             "fully_axolotl_infused_netherite"
     );
+
 
     public static final Item Poopoo = register(
       new Item(new Item.Settings()),
@@ -98,11 +101,8 @@ public class ModItems {
     public static final Item INFUSED_NETHERITE_CHESTPLATE = register(new ArmorItem(InfusedNetheriteArmorMaterial.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings()), "axolotl_infused_netherite_chestplate");
 
 
-    public static final Item AxolotlInfusedNetheriteAxe = register(
-            new AxeItem(axolotlInfusedNetheriteToolMaterial.INSTANCE, 3.0F, -3.0F, new Item.Settings()),
-            "axolotl_infused_netherite_axe"
-    );
-
+    public static final Item AxolotlInfusedNetheriteAxe = register(new AxeItem(axolotlInfusedNetheriteToolMaterial.INSTANCE, 12, 1.0F, new FabricItemSettings()), "fully_axolotl_infused_netherite_axe");
+    public static final Item AxolotlInfusedNetheriteSword = register(new SwordItem(axolotlInfusedNetheriteToolMaterial.INSTANCE, 10, 0.5F, new FabricItemSettings()), "fully_axolotl_infused_netherite_sword");
 
     public static void initialize() {
         // Add the Axolotl Fin Item to the Ingredients Item Group aka. Creative Tab
